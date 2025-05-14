@@ -1,0 +1,124 @@
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+.left-panel {
+  background-color: #ffffff;
+  opacity: 0.6;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      #ffffff 20%,
+      #ffffff 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #ffffff 20%,
+        #ffffff 80%,
+        transparent 80%,
+        transparent
+      )
+      10px 10px,
+    linear-gradient(#137dff 0.8px, transparent 0.8px) 0 -0.4px,
+    linear-gradient(90deg, #137dff 0.8px, #ffffff 0.8px) -0.4px 0;
+  background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+  width: 40%;
+  position: relative;
+}
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  width: 60%;
+}
+.right-panel > p,
+.right-panel > h1,
+.form-content > h1 {
+  padding-left: 20px;
+}
+.right-panel > p {
+  font-family: sans-serif;
+  font-size: 24px;
+}
+.form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 25px 0;
+  gap: 5px;
+  padding-left: 20px;
+}
+.name-row,
+.email-phone,
+.password-row {
+  display: flex;
+  gap: 20px;
+}
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 0.1px solid black;
+  width: 256px;
+}
+.btn {
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #137dff;
+  color: #ffffff;
+  border-radius: 5px;
+  width: 200px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+label {
+  font-family: sans-serif;
+  font-weight: 500;
+}
+input:focus {
+  outline: none;
+  border: 1px solid #137dff;
+}
+input:valid {
+  border: 1px solid #249f27;
+}
+input:invalid {
+  border: 1px solid #ff1c1c;
+}
